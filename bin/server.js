@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const livereload = require('express-livereload')
+//const livereload = require('express-livereload')
 const fs = require('fs');
 const opener = require('opener');
 const path = require('path');
@@ -12,7 +12,7 @@ const webpackMiddleware = require('webpack-dev-middleware');
 const webpackMiddlewareConfig = require('./middleware.config.js');
 
 
-const projectName = process.argv[2];
+//const projectName = process.argv[2];
 
 
 const PORT = parseInt(process.argv[3], 10) || 1507;
@@ -31,7 +31,7 @@ const serve = serveStatic(webpackConfig.devServer.contentBase, {
 
 const app = express();
 
-livereload(app);
+//livereload(app);
 
 const compiler = webpack(webpackConfig);
 const middleware = webpackMiddleware(compiler, webpackMiddlewareConfig);

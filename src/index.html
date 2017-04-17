@@ -3,24 +3,28 @@
 <head> 
   <meta charset="utf-8">
   <link rel="stylesheet" href="./css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <meta name=viewport content="width=device-width, initial-scale=1">
   <title>City weather</title>
 </head>
 <body>
-  <select name="city" class="city-name wrapp">
-    <option value="Санкт-Петербург">Санкт-Петербург</option>
-    <option value="Воронеж">Воронеж</option>
-    <option value="Лос-Анджелес">Лос-Анджелес</option>
-  </select>
+  <div class="menu-list wrapp">
+    <h2>City</h2>
+    <ul class="menu-list__list">
+      <li>Saint-Petersburg</li>
+      <li>Voronej</li>
+      <li>Los-Angeles</li>
+    </ul>
+  </div>
+  <div class="weather-container"></div>
 
-  <template>
-    <section class="weather wrapp invisible">
-      <div>
-        <h2>Погода в городе %cityname%</h2>
-        <div>Температура</div><div>%Temperature%</div>
-        <div>Влажность</div><div>%wet%</div>
-        <div>Ветер</div><div>%wind%</div>
-      </div>
+  <template id="template">
+    <section class="weather wrapp">
+      <h2 class="city-name">Санкт-Петербург</h2>
+      <span class="country">Россия</span>
+      <span class="time">9:00</span>
+      <span class="temp">32 F</span>
+      <span class="text">cloudy</span>
     </section>
   </template>
   <script src="js/main.js" charset="utf-8"></script>

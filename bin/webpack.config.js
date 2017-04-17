@@ -16,7 +16,7 @@ module.exports = {
     entryPath: SRC_DIRNAME
   },
 
-  devtool: 'sourcemap',
+  //devtool: 'sourcemap',
 
   entry: path.resolve(SRC_DIRNAME, 'js/main.js'),
 
